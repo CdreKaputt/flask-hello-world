@@ -16,7 +16,7 @@ def testing():
     return "Database Connection Successful"
 
 
-@app.route('db_create')
+@app.route('/db_create')
 def creating():
     conn = psycopg2.connect("postgresql://flask_hello_world_db_ezvh_user:S1wL8a2O2WBj4TsKvKdlDcTm7d6OmwO9@dpg-d7asec2li9vc73fhtatg-a/flask_hello_world_db_ezvh")
     cur = conn.cursor()
@@ -34,7 +34,7 @@ def creating():
     return "Basketball Table Successfully Created"
 
 
-@app.route('db_insert')
+@app.route('/db_insert')
 def inserting():
     conn = psycopg2.connect("postgresql://flask_hello_world_db_ezvh_user:S1wL8a2O2WBj4TsKvKdlDcTm7d6OmwO9@dpg-d7asec2li9vc73fhtatg-a/flask_hello_world_db_ezvh")
     cur = conn.cursor()
@@ -51,7 +51,7 @@ def inserting():
     return "Basketball Table Successfully Populated"
 
 
-@app.route('db_select')
+@app.route('/db_select')
 def selecting():
     conn = psycopg2.connect("postgresql://flask_hello_world_db_ezvh_user:S1wL8a2O2WBj4TsKvKdlDcTm7d6OmwO9@dpg-d7asec2li9vc73fhtatg-a/flask_hello_world_db_ezvh")
     cur = conn.cursor()
@@ -71,7 +71,7 @@ def selecting():
     return response_string
 
 
-@app.route('db_drop')
+@app.route('/db_drop')
 def dropping():
     conn = psycopg2.connect("postgresql://flask_hello_world_db_ezvh_user:S1wL8a2O2WBj4TsKvKdlDcTm7d6OmwO9@dpg-d7asec2li9vc73fhtatg-a/flask_hello_world_db_ezvh")
     cur = conn.cursor()
